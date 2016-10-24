@@ -41,6 +41,6 @@ lineReader.on('line', line => {
   let chars = line.split('');
   let kanjis = uniq(chars);
   kanjis.map( kanji => {
-    console.log(`INSERT INTO ${table} (kanji, length, jukugo) VALUES ('${kanji}', ${jukugo.length}, '${jukugo}')`);
+    console.log(`INSERT INTO ${table} (kanji, length, jukugo) VALUES ('${kanji}', ${jukugo.length}, '${jukugo}');`);
   });
 });
